@@ -1,4 +1,5 @@
 const path=require('path');
+const HtmlWebpackPlugin =require("html-webpack-plugin");
 module.exports=function(env,argv){
     const isEnvDevelopment =argv.mode === 'development'|| !argv.mode;
     const isEnvProduction  =argv.mode === 'production';
@@ -10,6 +11,14 @@ module.exports=function(env,argv){
             filename:'bundle.js',
             path:path.resolve(__dirname,'dist')
         },
+        devServer:{
+            contentBase:'./dist',
+        },
+        plugins:[
+            new HtmlWebpackPlugin({
+                template:"public/index.html"
+            })
+        ],
         module:{
             rules:[
                 { test:/\.js$/ ,

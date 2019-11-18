@@ -34937,7 +34937,7 @@ function (_React$Component) {
 
     _this.state = {
       /* query: 'stars:>1', */
-      curquery: 'pop'
+      curquery: "pop"
     };
     return _this;
   }
@@ -34955,7 +34955,7 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_7___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Header__WEBPACK_IMPORTED_MODULE_8__["default"], {
         oncurClick: this.oncurClick,
         curpage: curquery
-      }), curquery === 'pop' ? react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Pop__WEBPACK_IMPORTED_MODULE_9__["default"], null) : react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Battle__WEBPACK_IMPORTED_MODULE_10__["default"], null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Footer__WEBPACK_IMPORTED_MODULE_11__["default"], null));
+      }), curquery === "pop" ? react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Pop__WEBPACK_IMPORTED_MODULE_9__["default"], null) : react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Battle__WEBPACK_IMPORTED_MODULE_10__["default"], null), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_Footer__WEBPACK_IMPORTED_MODULE_11__["default"], null));
     }
   }]);
 
@@ -35012,84 +35012,84 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         style: {
-          width: '100%',
-          padding: '20px'
+          width: "100%",
+          padding: "20px"
         }
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
         style: {
-          textAlign: 'center',
-          marginTop: '20px'
+          textAlign: "center",
+          marginTop: "20px"
         }
       }, "\u7528\u6CD5\u8BF4\u660E"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("ul", {
         style: {
-          display: 'flex',
-          width: '100%',
-          listStyle: 'none',
-          justifyContent: 'space-around',
-          marginTop: '40px',
-          flexWrap: 'wrap'
+          display: "flex",
+          width: "100%",
+          listStyle: "none",
+          justifyContent: "space-around",
+          marginTop: "40px",
+          flexWrap: "wrap"
         }
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         style: {
-          padding: '40px',
-          textAlign: 'center',
-          width: '200px'
+          padding: "40px",
+          textAlign: "center",
+          width: "200px"
         }
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         style: {
-          fontSize: '20px'
+          fontSize: "20px"
         }
       }, "\u8F93\u5165\u4E24\u4E2AGithub\u7528\u6237"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
         className: "fa fa-user",
         "aria-hidden": "true",
         style: {
-          fontSize: '150px',
-          color: 'orange'
+          fontSize: "150px",
+          color: "orange"
         }
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         style: {
-          padding: '40px',
-          textAlign: 'center',
-          width: '200px'
+          padding: "40px",
+          textAlign: "center",
+          width: "200px"
         }
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         style: {
-          fontSize: '20px'
+          fontSize: "20px"
         }
       }, "\u6218\u6597"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
         className: "fa fa-fighter-jet",
         "aria-hidden": "true",
         style: {
-          fontSize: '150px'
+          fontSize: "150px"
         }
       })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
         style: {
-          padding: '40px',
-          textAlign: 'center',
-          width: '200px'
+          padding: "40px",
+          textAlign: "center",
+          width: "200px"
         }
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         style: {
-          fontSize: '20px'
+          fontSize: "20px"
         }
       }, "\u83B7\u80DC\u8005"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
         className: "fa fa-trophy",
         "aria-hidden": "true",
         style: {
-          fontSize: '150px',
-          color: 'yellow'
+          fontSize: "150px",
+          color: "yellow"
         }
       }))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
         style: {
-          textAlign: 'center',
-          marginTop: '150px'
+          textAlign: "center",
+          marginTop: "150px"
         }
       }, "\u73A9\u5BB6"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         style: {
-          display: 'flex',
-          justifyContent: 'space-around',
-          width: '100%',
-          flexWrap: 'wrap'
+          display: "flex",
+          justifyContent: "space-around",
+          width: "100%",
+          flexWrap: "wrap"
         }
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_Player__WEBPACK_IMPORTED_MODULE_6__["default"], {
         playname: "Player One"
@@ -35134,20 +35134,20 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var istyle = {
-  width: '20px'
+  width: "20px"
 };
 var astyle = {
-  textDecoration: 'none',
-  fontSize: '20px',
-  color: 'black'
+  textDecoration: "none",
+  fontSize: "20px",
+  color: "black"
 };
 var pstyle = {
-  textAlign: ' left',
-  paddingLeft: '25px',
-  lineHeight: '25px'
+  textAlign: " left",
+  paddingLeft: "25px",
+  lineHeight: "25px"
 };
 var spanstyle = {
-  fontSize: '20px'
+  fontSize: "20px"
 };
 
 var Card =
@@ -35169,24 +35169,24 @@ function (_React$Component) {
           card = _this$props.card;
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         style: {
-          backgroundColor: '#bfbfbf',
-          padding: '15px 15px',
-          width: '250px',
-          textAlign: 'center',
-          marginTop: '15px'
+          backgroundColor: "#bfbfbf",
+          padding: "15px 15px",
+          width: "250px",
+          textAlign: "center",
+          marginTop: "15px"
         }
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", null, "#", index), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("img", {
         src: card.owner.avatar_url,
         style: {
-          width: '150px'
+          width: "150px"
         },
         alt: ""
       }), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
         href: card.html_url,
         style: {
-          color: 'red',
-          fontSize: '25px',
-          textDecoration: 'none'
+          color: "red",
+          fontSize: "25px",
+          textDecoration: "none"
         }
       }, card.owner.login), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
         style: pstyle
@@ -35301,17 +35301,17 @@ function (_React$Component) {
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
         onClick: this.handleClick,
         style: {
-          borderStyle: 'none',
-          backgroundColor: 'transparent',
-          outline: 'none'
+          borderStyle: "none",
+          backgroundColor: "transparent",
+          outline: "none"
         },
         type: "button"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("i", {
-        className: this.state.isChange ? 'fa fa-moon-o' : 'fa fa-lightbulb-o',
+        className: this.state.isChange ? "fa fa-moon-o" : "fa fa-lightbulb-o",
         "aria-hidden": "true",
         style: {
-          width: '50px',
-          fontSize: '50px'
+          width: "50px",
+          fontSize: "50px"
         }
       }));
     }
@@ -35448,9 +35448,9 @@ function (_React$Component) {
       });
       return react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", {
         style: {
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'space-around'
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "space-around"
         }
       }, isLoading ? react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_Loading__WEBPACK_IMPORTED_MODULE_10__["default"], null) : list);
     }
@@ -35507,8 +35507,8 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         style: {
-          lineHeight: '80px',
-          textAlign: 'center'
+          lineHeight: "80px",
+          textAlign: "center"
         }
       }, "\u7248\u6743\u6240\u6709\xA9111");
     }
@@ -35569,9 +35569,9 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         style: {
-          height: '80px',
-          display: 'flex',
-          justifyContent: 'space-between'
+          height: "80px",
+          display: "flex",
+          justifyContent: "space-between"
         }
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_6__["default"], {
         oncurClick: this.props.oncurClick,
@@ -35615,13 +35615,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var lodingistyle = {
-  display: 'inline-block',
-  width: '50px',
-  height: '50px',
-  background: '#399',
-  margin: '0 2px',
-  transform: 'scaleY(0.4)',
-  animation: 'load 1.2s infinite'
+  display: "inline-block",
+  width: "50px",
+  height: "50px",
+  background: "#399",
+  margin: "0 2px",
+  transform: "scaleY(0.4)",
+  animation: "load 1.2s infinite"
 };
 
 var Loading =
@@ -35640,11 +35640,11 @@ function (_React$Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
         style: {
-          width: '100%',
-          height: '800px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center'
+          width: "100%",
+          height: "800px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center"
         }
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("i", {
         style: lodingistyle
@@ -35695,12 +35695,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var navstyle = {
-  justifyContent: 'space-around',
-  width: '30%',
-  display: 'flex',
-  listStyleType: 'none',
-  fontSize: '25px',
-  margin: '0 auto'
+  justifyContent: "space-around",
+  width: "30%",
+  display: "flex",
+  listStyleType: "none",
+  fontSize: "25px",
+  margin: "0 auto"
 };
 
 var Menu =
@@ -35721,20 +35721,20 @@ function (_React$Component) {
           _onClick = _this$props.onClick,
           current = _this$props.current;
       var links = [{
-        title: 'ALL',
-        query: 'stars:>1'
+        title: "ALL",
+        query: "stars:>1"
       }, {
-        title: 'Javascript',
-        query: 'stars:>1+language:javascript'
+        title: "Javascript",
+        query: "stars:>1+language:javascript"
       }, {
-        title: 'Ruby',
-        query: 'stars:>1+language:ruby'
+        title: "Ruby",
+        query: "stars:>1+language:ruby"
       }, {
-        title: 'Java',
-        query: 'stars:>1+language:java'
+        title: "Java",
+        query: "stars:>1+language:java"
       }, {
-        title: 'CSS',
-        query: 'stars:>1+language:css'
+        title: "CSS",
+        query: "stars:>1+language:css"
       }];
       var list = links.map(function (item, key) {
         return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
@@ -35742,11 +35742,11 @@ function (_React$Component) {
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
           href: "#",
           style: current === item.query ? {
-            color: 'red',
-            textDecoration: 'none'
+            color: "red",
+            textDecoration: "none"
           } : {
-            color: 'black',
-            textDecoration: 'none'
+            color: "black",
+            textDecoration: "none"
           },
           onClick: function onClick() {
             return _onClick(item.query);
@@ -35794,12 +35794,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ulstyle = {
-  listStyleType: 'none',
-  display: 'flex',
-  alignContent: 'center',
-  lineHeight: '80px',
-  width: '150px',
-  justifyContent: 'space-around'
+  listStyleType: "none",
+  display: "flex",
+  alignContent: "center",
+  lineHeight: "80px",
+  width: "150px",
+  justifyContent: "space-around"
 };
 
 var Nav =
@@ -35820,11 +35820,11 @@ function (_React$Component) {
           current = _this$props.current,
           oncurClick = _this$props.oncurClick;
       var alist = [{
-        title: '热门项目',
-        curquery: 'pop'
+        title: "热门项目",
+        curquery: "pop"
       }, {
-        title: 'battle',
-        curquery: 'battle'
+        title: "battle",
+        curquery: "battle"
       }];
       var list = alist.map(function (item, key) {
         return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("li", {
@@ -35832,11 +35832,11 @@ function (_React$Component) {
         }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
           href: "#",
           style: {
-            color: current === item.curquery ? 'red' : 'black',
-            textDecoration: 'none',
-            fontSize: '20px',
-            display: 'inline-block',
-            width: '100%'
+            color: current === item.curquery ? "red" : "black",
+            textDecoration: "none",
+            fontSize: "20px",
+            display: "inline-block",
+            width: "100%"
           },
           onClick: function onClick() {
             return oncurClick(item.curquery);
@@ -35903,7 +35903,7 @@ function (_React$Component) {
     _this = _babel_runtime_helpers_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2___default()(this, _babel_runtime_helpers_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3___default()(Player).call(this, props));
 
     _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_6___default()(_babel_runtime_helpers_assertThisInitialized__WEBPACK_IMPORTED_MODULE_4___default()(_this), "handelChange", function (e) {
-      if (e.target.value === '') {
+      if (e.target.value === "") {
         _this.setState({
           bcolor: false
         });
@@ -35927,31 +35927,31 @@ function (_React$Component) {
       var bcolor = this.state.bcolor;
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
         style: {
-          marginTop: '50px'
+          marginTop: "50px"
         }
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("h2", {
         style: {
-          color: '#bfbfbf'
+          color: "#bfbfbf"
         }
       }, playname), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         style: {
-          width: '300px',
-          height: '40px',
-          fontSize: '20px',
-          border: '0.3px solid #bfbfbf'
+          width: "300px",
+          height: "40px",
+          fontSize: "20px",
+          border: "0.3px solid #bfbfbf"
         },
         placeholder: "github\u7528\u6237\u540D",
         onChange: this.handelChange
       }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("button", {
         style: {
-          width: '150px',
-          height: '40px',
-          marginLeft: '20px',
-          color: '#bfbfbf',
-          fontSize: '20px',
-          backgroundColor: bcolor === true ? 'black' : 'transparent',
-          border: '1px solid #bfbfbf',
-          borderRadius: '8px'
+          width: "150px",
+          height: "40px",
+          marginLeft: "20px",
+          color: "#bfbfbf",
+          fontSize: "20px",
+          backgroundColor: bcolor === true ? "black" : "transparent",
+          border: "1px solid #bfbfbf",
+          borderRadius: "8px"
         },
         type: "button"
       }, "\u63D0\u4EA4"));
@@ -36022,7 +36022,7 @@ function (_React$Component) {
     });
 
     _this.state = {
-      query: 'stars:>1'
+      query: "stars:>1"
     };
     return _this;
   }
@@ -36064,7 +36064,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_App__WEBPACK_IMPORTED_MODULE_2__["default"], null), document.getElementById('app'));
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_App__WEBPACK_IMPORTED_MODULE_2__["default"], null), document.getElementById("app"));
 
 /***/ })
 
