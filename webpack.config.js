@@ -1,5 +1,6 @@
 const path=require('path');
 const HtmlWebpackPlugin =require("html-webpack-plugin");
+const webpack =require('webpack');
 module.exports=function(env,argv){
     const isEnvDevelopment =argv.mode === 'development'|| !argv.mode;
     const isEnvProduction  =argv.mode === 'production';
@@ -13,21 +14,55 @@ module.exports=function(env,argv){
         },
         devServer:{
             contentBase:'./dist',
+            hot:true,
         },
         plugins:[
             new HtmlWebpackPlugin({
                 template:"public/index.html"
-            })
+            }),
+            new webpack.NamedModulesPlugin(),
+            new webpack.HotModuleReplacementPlugin()
         ],
         module:{
             rules:[
+                {
+                    test:/\.(woff|woff2|eot|ttf|otf)$/,
+                    use:["file-loader"]
+                },
+                {
+                    test:[/\.bmp$/,/\.gif$/,/.jpe?g$/,/\.png$/,/\.svg$/],
+                    loader:"url-loader",
+                    options:{
+                        limit:10000
+                    }
+                },
+                {
+                    test:/\.css$/,
+                    include:[path.resolve(__dirname,'src/styles'),/node_modules/],
+                    use:[
+                        "style-loader",
+                        "css-loader"
+                    ]
+                },
+                {
+                     test:/\.css$/,
+                     exclude:[path.resolve(__dirname,'src/styles'),/node_modules/],
+                     use:[
+                        "style-loader",
+                        "css-loader?modules"
+                    ]
+                },
                 { test:/\.js$/ ,
                     exclude:/node_modules/,
                     enforce:"pre",
-                    use:"eslint-loader"},
+                    loader:"eslint-loader", 
+                    options: {
+                            fix: true
+                        }
+                },
                 { test:/\.js$/ ,
                   exclude:/node_modules/,
-                  use:'babel-loader'}
+                  use:'babel-loader'},
             ]
          }
     }

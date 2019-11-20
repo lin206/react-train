@@ -1,31 +1,11 @@
 import React from "react";
+/* import axios from "axios"; */
 
 class Player extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      bcolor: false
-    };
-  }
-
-  handelChange = e => {
-    if (e.target.value === "") {
-      this.setState({
-        bcolor: false
-      });
-    } else {
-      this.setState({
-        bcolor: true
-      });
-    }
-  };
-
   render() {
-    const { playname } = this.props;
-    const { bcolor } = this.state;
+    const { onClick, handelChange } = this.props;
     return (
-      <div style={{ marginTop: "50px" }}>
-        <h2 style={{ color: "#bfbfbf" }}>{playname}</h2>
+      <>
         <input
           style={{
             width: "300px",
@@ -34,7 +14,7 @@ class Player extends React.Component {
             border: "0.3px solid #bfbfbf"
           }}
           placeholder="github用户名"
-          onChange={this.handelChange}
+          onChange={handelChange}
         />
         <button
           style={{
@@ -43,15 +23,17 @@ class Player extends React.Component {
             marginLeft: "20px",
             color: "#bfbfbf",
             fontSize: "20px",
-            backgroundColor: bcolor === true ? "black" : "transparent",
+            backgroundColor:
+              this.props.color === true ? "black" : "transparent",
             border: "1px solid #bfbfbf",
             borderRadius: "8px"
           }}
           type="button"
+          onClick={onClick}
         >
           提交
         </button>
-      </div>
+      </>
     );
   }
 }

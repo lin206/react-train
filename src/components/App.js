@@ -1,4 +1,5 @@
 import React from "react";
+import { hot } from "react-hot-loader/root";
 import Header from "./Header";
 import Pop from "./Pop";
 import Battle from "./Battle";
@@ -36,4 +37,5 @@ class App extends React.Component {
     );
   }
 }
-export default App;
+/* export default App; */
+export default hot(App);

@@ -1,64 +1,54 @@
 import React from "react";
+import styles from "./Card.css";
 
-const istyle = {
-  width: "20px"
-};
-const astyle = {
-  textDecoration: "none",
-  fontSize: "20px",
-  color: "black"
-};
-const pstyle = {
-  textAlign: " left",
-  paddingLeft: "25px",
-  lineHeight: "25px"
-};
-const spanstyle = {
-  fontSize: "20px"
-};
 class Card extends React.Component {
   render() {
     const { index, card } = this.props;
     return (
-      <div
-        style={{
-          backgroundColor: "#bfbfbf",
-          padding: "15px 15px",
-          width: "250px",
-          textAlign: "center",
-          marginTop: "15px"
-        }}
-      >
+      <div className={styles.card}>
         <h1>#{index}</h1>
-        <img src={card.owner.avatar_url} style={{ width: "150px" }} alt="" />
+        <img src={card.owner.avatar_url} className={styles.imgstyle} alt="" />
         <br />
-        <a
-          href={card.html_url}
-          style={{ color: "red", fontSize: "25px", textDecoration: "none" }}
-        >
+        <a href={card.html_url} className={styles.titlestyle}>
           {card.owner.login}
         </a>
-        <p style={pstyle}>
-          <i className="fa fa-user" aria-hidden="true" style={istyle} />
-          <a href={card.owner.html_url} style={astyle}>
+        <p className={styles.pstyle}>
+          <i
+            className="fa fa-user"
+            aria-hidden="true"
+            style={{ width: "20px" }}
+          />
+          <a href={card.owner.html_url} className={styles.astyle}>
             {card.owner.login}
           </a>
         </p>
-        <p style={pstyle}>
-          <i className="fa fa-star" aria-hidden="true" style={istyle} />
-          <span style={spanstyle}>{card.stargazers_count} stars</span>
+        <p className={styles.pstyle}>
+          <i
+            className="fa fa-star"
+            aria-hidden="true"
+            style={{ width: "20px" }}
+          />
+          <span className={styles.spanstyle}>
+            {card.stargazers_count} stars
+          </span>
         </p>
-        <p style={pstyle}>
-          <i className="fa fa-code-fork" aria-hidden="true" style={istyle} />
-          <span style={spanstyle}>{card.forks_count} forks</span>
+        <p className={styles.pstyle}>
+          <i
+            className="fa fa-code-fork"
+            aria-hidden="true"
+            style={{ width: "20px" }}
+          />
+          <span className={styles.spanstyle}>{card.forks_count} forks</span>
         </p>
-        <p style={pstyle}>
+        <p className={styles.pstyle}>
           <i
             className="fa fa-exclamation-triangle"
             aria-hidden="true"
-            style={istyle}
+            style={{ width: "20px" }}
           />
-          <span style={spanstyle}>{card.open_issues_count} open issues</span>
+          <span className={styles.spanstyle}>
+            {card.open_issues_count} open issues
+          </span>
         </p>
       </div>
     );

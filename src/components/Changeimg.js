@@ -1,4 +1,6 @@
 import React from "react";
+import "font-awesome/css/font-awesome.min.css";
+import styles from "./Changeimg.css";
 
 class Changeimg extends React.Component {
   constructor(props) {
@@ -18,11 +20,7 @@ class Changeimg extends React.Component {
     return (
       <button
         onClick={this.handleClick}
-        style={{
-          borderStyle: "none",
-          backgroundColor: "transparent",
-          outline: "none"
-        }}
+        className={styles.changebut}
         type="button"
       >
         <i
