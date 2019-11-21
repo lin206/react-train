@@ -63,7 +63,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "962715440d4ec8515ace";
+/******/ 	var hotCurrentHash = "59bb682320acaebc74b0";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -42580,7 +42580,7 @@ function (_React$Component) {
           lineHeight: "80px",
           textAlign: "center"
         }
-      }, "\u7248\u6743\u6240\u6709\xA9111");
+      }, "\u7248\u6743\u6240\u6709\xA9\u4E95\u5B57\u68CB\u5730\u5740\uFF1Ahttps://lin206.github.io/react-train/chess.html");
     }
   }, {
     key: "__reactstandin__regenerateByEval",
@@ -43616,7 +43616,6 @@ function (_React$Component) {
         res = "Tie";
       }
 
-      console.log("{battle".concat(anrep));
       this.setState({
         res: res
       });
