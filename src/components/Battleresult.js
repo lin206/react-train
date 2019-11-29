@@ -1,35 +1,29 @@
 import React from "react";
-import axios from "axios";
 import ResultCard from "./ResultCard";
 
 class Battleresult extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      onerep: 0,
-      tworep: 0
-    };
-  }
-
-  componentDidMount() {
-    this.battle();
-  }
-
-  battle = async () => {
-    const { playone, playtwo } = this.props;
-    const play1url = `https://api.github.com/users/${playone}?client_id=0aad2fd78be38bd241df&client_secret=fa0825b616ae72b529d829b963d82aaf58a01209`;
-    const play2url = `https://api.github.com/users/${playtwo}?client_id=0aad2fd78be38bd241df&client_secret=fa0825b616ae72b529d829b963d82aaf58a01209`;
-    const res1 = await axios.get(play1url);
-    const res2 = await axios.get(play2url);
-    this.setState({
-      onerep: res1.data.public_repos,
-      tworep: res2.data.public_repos
-    });
+  resetClick = () => {
+    this.props.history.push("/battle");
   };
 
   render() {
-    const { playone, playtwo, onbut } = this.props;
-    const { onerep, tworep } = this.state;
+    let { playres1, playres2 } = "Tie";
+    if (
+      this.props.location.query.playone.public_repos >
+      this.props.location.query.playtwo.public_repos
+    ) {
+      playres1 = "Winner";
+      playres2 = "Loser";
+    } else if (
+      this.props.location.query.playone.public_repos <
+      this.props.location.query.playtwo.public_repos
+    ) {
+      playres1 = "Loser";
+      playres2 = "Winner";
+    } else {
+      playres1 = "Tie";
+      playres2 = "Tie";
+    }
     return (
       <>
         <div
@@ -40,15 +34,15 @@ class Battleresult extends React.Component {
             marginTop: "80px"
           }}
         >
-          <ResultCard play={playone} anrep={tworep} />
-          <ResultCard play={playtwo} anrep={onerep} />
+          <ResultCard data={this.props.location.query.playone} res={playres1} />
+          <ResultCard data={this.props.location.query.playtwo} res={playres2} />
         </div>
         <div
           style={{ width: "100%", display: "flex", justifyContent: "center" }}
         >
           <button
             type="button"
-            onClick={onbut}
+            onClick={this.resetClick}
             style={{
               width: "150px",
               height: "50px",

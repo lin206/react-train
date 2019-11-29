@@ -1,11 +1,41 @@
 import React from "react";
+/* import {Link } from "react-router-dom"; */
+import axios from "axios";
 import Player from "./Player";
 import PlayCard from "./PlayCard";
 
 class Battlegame extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      playonedata: null,
+      playtwodata: null
+    };
+  }
+
+  playdata = async () => {
+    const { playone, playtwo } = this.props;
+    const play1url = `https://api.github.com/users/${playone}?client_id=0aad2fd78be38bd241df&client_secret=fa0825b616ae72b529d829b963d82aaf58a01209`;
+    const play2url = `https://api.github.com/users/${playtwo}?client_id=0aad2fd78be38bd241df&client_secret=fa0825b616ae72b529d829b963d82aaf58a01209`;
+    const res1 = await axios.get(play1url);
+    const res2 = await axios.get(play2url);
+    this.setState({
+      playonedata: res1.data,
+      playtwodata: res2.data
+    });
+    const playque = {
+      playone: this.state.playonedata,
+      playtwo: this.state.playtwodata
+    };
+    const path = {
+      pathname: "/battle/result",
+      query: playque
+    };
+    this.props.history.push(path);
+  };
+
   render() {
     const {
-      onbut,
       playone,
       playtwo,
       onecom,
@@ -69,9 +99,9 @@ class Battlegame extends React.Component {
                 fontSize: "18px",
                 outline: "none"
               }}
-              onClick={onbut}
+              onClick={this.playdata}
             >
-              battle
+              Battle
             </button>
           </div>
         ) : (

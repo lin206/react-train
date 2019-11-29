@@ -1,13 +1,11 @@
 import React from "react";
 import "font-awesome/css/font-awesome.min.css";
 import Battlerule from "./Battlerule";
-import Battleresult from "./Battleresult";
 
 class Battle extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      isresult: false,
       playone: "",
       playtwo: "",
       onecom: false,
@@ -87,62 +85,25 @@ class Battle extends React.Component {
     });
   };
 
-  handleresult = () => {
-    let {
-      isresult,
-      playone,
-      changone,
-      onecom,
-      playtwo,
-      changtwo,
-      twocom
-    } = this.state;
-    if (isresult) {
-      isresult = false;
-      playone = "";
-      changone = false;
-      onecom = false;
-      playtwo = "";
-      changtwo = false;
-      twocom = false;
-    } else {
-      isresult = true;
-    }
-    this.setState({
-      isresult,
-      playone,
-      changone,
-      onecom,
-      playtwo,
-      changtwo,
-      twocom
-    });
-  };
-
   render() {
-    const { isresult, playone, playtwo } = this.state;
-    return isresult ? (
-      <Battleresult
-        playone={playone}
-        playtwo={playtwo}
-        onbut={this.handleresult}
-      />
-    ) : (
-      <Battlerule
-        onbut={this.handleresult}
-        playone={this.state.playone}
-        playtwo={this.state.playtwo}
-        onecom={this.state.onecom}
-        twocom={this.state.twocom}
-        changone={this.state.changone}
-        changtwo={this.state.changtwo}
-        handelChange1={this.handelChange1}
-        handelChange2={this.handelChange2}
-        handleClick1={this.handleClick1}
-        handleClick2={this.handleClick2}
-        returnClick1={this.returnClick1}
-        returnClick2={this.returnClick2}
-      />
+    return (
+      <>
+        <Battlerule
+          playone={this.state.playone}
+          playtwo={this.state.playtwo}
+          onecom={this.state.onecom}
+          twocom={this.state.twocom}
+          changone={this.state.changone}
+          changtwo={this.state.changtwo}
+          handelChange1={this.handelChange1}
+          handelChange2={this.handelChange2}
+          handleClick1={this.handleClick1}
+          handleClick2={this.handleClick2}
+          returnClick1={this.returnClick1}
+          returnClick2={this.returnClick2}
+          history={this.props.history}
+        />
+      </>
     );
   }
 }

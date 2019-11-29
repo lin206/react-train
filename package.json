@@ -58,10 +58,11 @@
     "prettier": "^1.19.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
+    "react-hot-loader": "^4.12.18",
     "react-infinite-scroller": "^1.2.4",
+    "react-router-dom": "^5.1.2",
     "style-loader": "^1.0.0",
     "url-loader": "^2.2.0",
-    "react-hot-loader": "^4.12.18",
     "webpack-dev-server": "^3.9.0"
   },
   "devDependencies": {

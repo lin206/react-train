@@ -5,7 +5,6 @@ import Battlegame from "./Battlegame";
 class Battlerule extends React.Component {
   render() {
     const {
-      onbut,
       playone,
       playtwo,
       onecom,
@@ -51,7 +50,6 @@ class Battlerule extends React.Component {
         <h1 style={{ textAlign: "center", marginTop: "150px" }}>玩家</h1>
         <div className={styles.playerbox}>
           <Battlegame
-            onbut={onbut}
             playone={playone}
             playtwo={playtwo}
             onecom={onecom}
@@ -64,6 +62,7 @@ class Battlerule extends React.Component {
             handleClick2={handleClick2}
             returnClick1={returnClick1}
             returnClick2={returnClick2}
+            history={this.props.history}
           />
         </div>
       </div>

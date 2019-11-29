@@ -1,6 +1,6 @@
 import React from "react";
 import axios from "axios";
-/* import InfiniteScroll from 'react-infinite-scroller'; */
+import InfiniteScroll from "react-infinite-scroller";
 import Loading from "./Loading";
 import Card from "./Card";
 
@@ -9,7 +9,9 @@ class Content extends React.Component {
     super(props);
     this.state = {
       isLoading: false,
-      repos: []
+      repos: [],
+      preurl: "",
+      pageNum: 1
     };
   }
 
@@ -23,34 +25,55 @@ class Content extends React.Component {
     }
   }
 
-  search = async () => {
+  search = async (page = 1) => {
     const { query } = this.props;
     this.setState({
       isLoading: true
     });
-    const url = `https://api.github.com/search/repositories?q=${query}&sort=stars&order=desc&type=Repositories`;
+    const purl = `https://api.github.com/search/repositories?q=${query}&sort=stars&order=desc&type=Repositories`;
+    const ppurl = this.state.preurl;
+    let p = this.state.pageNum;
+    if (ppurl !== purl) {
+      this.setState({
+        repos: [],
+        pageNum: 1,
+        preurl: purl
+      });
+    }
+    const url = `https://api.github.com/search/repositories?q=${query}&sort=stars&order=desc&type=Repositories&page=${page}`;
     const res = await axios.get(url);
-    this.setState({
-      repos: res.data.items,
-      isLoading: false
-    });
+    p += 1;
+    this.setState(state => ({
+      repos: [...state.repos, ...res.data.items],
+      isLoading: false,
+      pageNum: p
+    }));
   };
 
   render() {
-    const { repos, isLoading } = this.state;
+    const { repos, isLoading, pageNum } = this.state;
     const list = repos.map((item, key) => (
       <Card key={key} index={key + 1} card={item} />
     ));
     return (
-      <div
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "space-around"
-        }}
+      <InfiniteScroll
+        initialLoad={false}
+        loadMore={() => this.search(pageNum)}
+        hasMore={!isLoading}
+        loader={<Loading />}
       >
-        {isLoading ? <Loading /> : list}
-      </div>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-around"
+          }}
+        >
+          {list}
+        </div>
+        {isLoading && <Loading />}
+      </InfiniteScroll>
+      /*  {isLoading ? <Loading /> : list} */
     );
   }
 }
